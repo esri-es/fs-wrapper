@@ -2,17 +2,20 @@ doctype html
 html
 	head
 		title Feature Server
-		style(type='text/css').
-			html {
-				font-size: small;
-				font-family: Verdana, Arial, Helvetica, sans-serif; 				
-			}
-			table { border-collapse: collapse;}
-			td { }
-			th { vertical-align: top; }
-			td, th { text-align: left; border: 1px solid black; padding: 5px; }
+		link(href='/css/ESRI.ArcGIS.Rest.css', rel='stylesheet')
 	body
-		h1 Feature Server
-		p
-			b Service Description: 
-			| #{serviceDescription}
+		table#userTable(width='100%')
+			tr
+				td#titlecell ArcGIS Services Directory
+		table#navTable(width='100%')
+			tr(valign="top")
+				td#breadcrumbs breadcrumbs
+				td#help(align='right')
+					a(href='help.html') Help
+					|  | 
+					a(href='apiref.html') API Reference
+		div.restHeader
+			h2 Feature Server
+		div.restBody
+			b View In: 
+			a(href='') ArcGIS.com Map

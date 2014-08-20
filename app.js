@@ -22,6 +22,7 @@ var express         = require("express"),
 
 app.engine('jade', require('jade').__express);
 
+app.use(express.static(__dirname + "/assets"));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(methodOverride());

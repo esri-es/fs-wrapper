@@ -1,0 +1,18 @@
+{
+  "name": "fs-wrap",
+  "version": "0.0.1",
+  "description": "Esri Geoservices Feature Service REST Wrapper",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Javier Abadia",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "express": "~4.8.0",
+    "method-override": "~2.1.2",
+    "body-parser": "~1.5.1",
+    "jade": "~1.5.0",
+    "request": "~2.40.0"
+  }
+}

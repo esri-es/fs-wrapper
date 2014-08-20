@@ -1,26 +1,12 @@
-﻿BODY
+﻿body,html
 {
-	padding-right: 0px;
-	padding-left: 0px;
+	padding: 0;
+	margin: 0;
 	background: #fff;
-	padding-bottom: 0px;
-	margin: 0px;
-	padding-top: 0px;
 	font-family: Verdana,Arial,Helvetica,sans-serif;
 	min-width: 780px;
 }
-HTML
-{
-	padding-right: 0px;
-	padding-left: 0px;
-	background: #fff;
-	padding-bottom: 0px;
-	margin: 0px;
-	padding-top: 0px;
-	font-family: Verdana,Arial,Helvetica,sans-serif;
-	min-width: 780px;
-}
-CODE
+code
 {
 	font-size: 1.3em;
 	font-family: serif;
@@ -31,99 +17,96 @@ CODE
 	font-size: 0.8em;
 	margin-left: 22px;
 }
-TABLE#userTable
+
+table#userTable
 {
 	font-size: 0.80em;
 }
-
-TABLE#navTable
+table#navTable
 {
 	padding-bottom: 5px;
-	margin: 0px 0px 3px;
 	padding-top: 0px;
+	margin: 0px 0px 3px;
 	border-bottom: #000 1px solid;
 	border-top: #000 1px solid;
 	background-color: #80FF00;
 }
-TABLE#loginTable
+table#loginTable
 {
 	padding: 5px;
 	margin: 10px 0px 3px;
 	border: #000 1px solid;
 	background-color: #80FF00;
 }
-TABLE#adminNavTable
+table#adminNavTable
 {
 	padding-bottom: 5px;
-	margin: 0px 0px 3px;
 	padding-top: 0px;
+	margin: 0px 0px 3px;
 	border-bottom: #000 1px solid;
 	border-top: #000 1px solid;
 	background-color: #80FF00;
 }
-TABLE#adminLoginTable
+table#adminLoginTable
 {
 	padding: 5px;
 	margin: 10px 0px 3px;
 	border: #000 1px solid;
 	background-color: #80FF00;
 }
-TD#breadcrumbs
+td#breadcrumbs
 {
 	padding-right: 0px;
 	padding-left: 11px;
-	font-size: 0.8em;
-	font-weight: bold;
 	padding-bottom: 5px;
-	margin: 0px 0px 3px;
 	padding-top: 0px;
+	font-weight: bold;
+	font-size: 0.8em;
+	margin: 0px 0px 3px;
 }
-TD#help
+td#help
 {
 	padding-right: 11px;
 	padding-left: 0px;
-	font-size: 0.70em;
 	padding-bottom: 5px;
-	margin: 0px 0px 3px;
 	padding-top: 3px;
+	font-size: 0.70em;
+	margin: 0px 0px 3px;
 }
-TD#titlecell
+td#titlecell
 {
 	padding-right: 0px;
 	padding-left: 11px;
+	padding-bottom: 5px;
+	padding-top: 3px;
 	font-size: 1.0em;
 	font-weight: bold;
-	padding-bottom: 5px;
 	margin: 0px 0px 3px;
-	padding-top: 3px;
 }
-TD
+td
 {
 	padding-right: 11px;
 	padding-left: 0px;
-	font-size: 0.90em;
 	padding-bottom: 5px;
-	margin: 0px 0px 3px;
 	padding-top: 3px;
+	margin: 0px 0px 3px;
+	font-size: 0.90em;
 }
-H2
+h2
 {
 	margin-left: 11px;
 	font-weight: bold;
 	font-size: 1.2em;
 }
-H3
+h3
 {
 	font-weight: bold;
 	font-size: 1.25em;
 	margin-bottom: 0px;
 }
-LI
+li
 {
-	padding-right: 0px;
-	padding-left: 0px;
-	padding-bottom: 3px;
-	padding-top: 0px;
+	padding: 0px 0px 3px 0px;
 }
 .restErrors
 {

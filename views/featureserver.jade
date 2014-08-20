@@ -4,9 +4,10 @@ html
 		title Feature Server
 		link(href='/css/ESRI.ArcGIS.Rest.css', rel='stylesheet')
 	body
+		//- Page header
 		table#userTable(width='100%')
 			tr
-				td#titlecell ArcGIS Services Directory
+				td#titlecell Wrapped Services Directory
 		table#navTable(width='100%')
 			tr(valign="top")
 				td#breadcrumbs breadcrumbs
@@ -14,8 +15,36 @@ html
 					a(href='help.html') Help
 					|  | 
 					a(href='apiref.html') API Reference
+
 		div.restHeader
 			h2 Feature Server
+
 		div.restBody
 			b View In: 
 			a(href='') ArcGIS.com Map
+			br
+			br
+			//- Service Description
+			b Service Description: 
+			| #{serviceDescription}	
+			br
+			br
+			//- Layers
+			b Layers: 
+			ul
+				li
+					a(href='xx') xx
+					|  (0)
+			br
+			br
+			//- Tables
+			b Tables: 
+			ul
+				li
+					a(href='xx') xx
+					|  (0)
+			//- Supported Interfaces
+			b Supported Interfaces: 
+			a(href='x') REST
+			| 		
+			a(href='x') SOAP

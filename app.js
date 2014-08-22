@@ -1,5 +1,13 @@
 "use strict";
 
+var express         = require("express"),
+	app             = express(),
+	bodyParser      = require("body-parser"),
+	methodOverride  = require("method-override"),
+	featureService  = require("./featureService"),
+	featureLayer    = require("./featureLayer");
+
+
 function errorHandler(err, req, res, next) 
 {
 	res.status(500);
@@ -13,13 +21,6 @@ function logErrors(err, req, res, next)
 }
 
 
-
-var express         = require("express"),
-	app             = express(),
-	bodyParser      = require("body-parser"),
-	methodOverride  = require("method-override"),
-	featureService  = require("./featureService");
-
 app.engine('jade', require('jade').__express);
 
 app.use(express.static(__dirname + "/assets"));
@@ -29,9 +30,10 @@ app.use(methodOverride());
 
 var router = express.Router();
 
-router.get('', featureService.root);
+router.get('/:serviceName/FeatureServer/', featureService.root);
+router.get('/:serviceName/FeatureServer/:layerId', featureLayer.root);
 
-app.use('/arcgis/rest/services/test1/FeatureServer', router);
+app.use('/arcgis/rest/services', router);
 app.use(logErrors);
 app.use(errorHandler);
 

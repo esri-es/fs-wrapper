@@ -1,7 +1,8 @@
 doctype html
 html
 	head
-		title Feature Server
+		base(href=serviceUrl+'/')
+		title #{serviceFullName} (FeatureServer)
 		link(href='/css/ESRI.ArcGIS.Rest.css', rel='stylesheet')
 	body
 		//- Page header
@@ -17,7 +18,7 @@ html
 					a(href='apiref.html') API Reference
 
 		div.restHeader
-			h2 Feature Server
+			h2 #{serviceFullName} (Feature Server)
 
 		div.restBody
 			b View In: 
@@ -33,7 +34,7 @@ html
 			b Layers: 
 			ul
 				li
-					a(href='xx') xx
+					a(href='0') xx
 					|  (0)
 			br
 			br
@@ -41,7 +42,7 @@ html
 			b Tables: 
 			ul
 				li
-					a(href='xx') xx
+					a(href='0') xx
 					|  (0)
 			//- Supported Interfaces
 			b Supported Interfaces: 

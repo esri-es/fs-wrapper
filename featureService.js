@@ -1,41 +1,24 @@
 "use strict";
 
-var request     = require('request');
+var request     = require('request'),
+	esriRest    = require('./esriRest');
 
 /* http://resources.arcgis.com/en/help/rest/apiref/index.html?featureserver.html */
-
-/* internal methods */
-
-function renderView(req,res,view,data)
-{
-	var f = req.query.f || 'html';
-
-	if( req.query.callback )
-	{
-		f = 'jsonp';
-	}
-
-	switch(f)
-	{
-		case 'html':
-			res.render(view, data);
-			break;
-		case 'json':
-			res.json(data);
-			break;
-		case 'jsonp':
-			res.jsonp(data);
-			break;
-		default:
-			res.json({error:"format " + f + " not supported"});
-	}
-}
-
 
 /* exported methods */
 
 exports.root = function(req,res)
 {
+	var serviceName = req.params.serviceName,		
+		serviceUrl = "http://localhost:3000/arcgis/rest/services/" + serviceName + "/FeatureServer";
+
+	var htmlProperties = 
+	{
+    	serviceUrl: serviceUrl,
+    	serviceName: serviceName,
+    	serviceFullName: serviceName
+	};
+
 	var serviceProperties = 
     { 
 		currentVersion: 10.1,
@@ -87,6 +70,6 @@ exports.root = function(req,res)
 		],
 		enableZDefaults: false
 	};
-	renderView(req,res,'featureserver.jade',serviceProperties);
+	esriRest.renderView(req,res,'featureserver.jade',serviceProperties,htmlProperties);
 };
 

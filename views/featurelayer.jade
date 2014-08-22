@@ -1,0 +1,73 @@
+doctype html
+html
+	head
+		base(href=layerUrl+'/')
+		title Feature Layer: #{layerName} (ID:#{layerId})
+		link(href='/css/ESRI.ArcGIS.Rest.css', rel='stylesheet')
+	body
+		//- Page header
+		table#userTable(width='100%')
+			tr
+				td#titlecell Wrapped Services Directory
+		table#navTable(width='100%')
+			tr(valign="top")
+				td#breadcrumbs breadcrumbs
+				td#help(align='right')
+					a(href='help.html') Help
+					|  | 
+					a(href='apiref.html') API Reference
+
+		div.restHeader
+			h2 Feature Layer: #{layerName} (ID:#{layerId})
+
+		div.restBody
+			b View In: 
+			a(href='') ArcGIS.com Map
+			br
+			br
+			//- Display Field
+			b Display Field: 
+			| #{displayField}	
+			br
+			br
+			//- Type
+			b Type: 
+			| #{layerType}
+			br
+			br
+			b Geometry Type: 
+			| #{geometryType}
+			br
+			br
+			b Description: 
+			| #{description}
+			br
+			br
+			b Copyright Text: 
+			| #{copyrightText}
+			br
+			br
+			b Min. Scale: 
+			| #{minScale}
+			br
+			br
+			b Max. Scale: 
+			| #{maxScale}
+			br
+			br
+			b Supported Interfaces:  
+			a(href='x') REST
+			br
+			br
+			b Supported Operations: 
+			a(href='query') Query
+			| &nbsp;&nbsp;
+			a(href='queryRelatedRecords') Query Related Records
+			| &nbsp;&nbsp;
+			a(href='addFeatures') Add Features
+			| &nbsp;&nbsp;
+			a(href='updateFeatures') Update Features
+			| &nbsp;&nbsp;
+			a(href='deleteFeatures') Delete Features
+			| &nbsp;&nbsp;
+			a(href='applyEdits') Apply Edits

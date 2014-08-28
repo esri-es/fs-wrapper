@@ -27,5 +27,6 @@ exports.renderView = function(req,res,view,data,htmlData)
 		default:
 			res.json({error:"format " + f + " not supported"});
 	}
-}
+};
+
 

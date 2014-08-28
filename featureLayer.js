@@ -16,17 +16,18 @@ exports.root = function(req,res)
 
 	var htmlProperties = 
 	{
-    	serviceUrl: serviceUrl,
-    	serviceName: serviceName,
-    	serviceFullName: serviceName,
-    	layerId: req.params.layerId,
-    	layerUrl: 'http://localhost:3000/arcgis/rest/services/' + serviceName + '/FeatureServer/0'
+		serviceUrl: serviceUrl,
+		serviceName: serviceName,
+		serviceFullName: serviceName,
+		layerId: req.params.layerId,
+		layerUrl: 'http://localhost:3000/arcgis/rest/services/' + serviceName + '/FeatureServer/0'
 	};
 
 	var layerProperties = 
     {
-    	displayField: 'field',
-    	layerType: 'Feature Layer',
-    }	
+		displayField: 'field',
+		layerType: 'Feature Layer'
+    };	
 	esriRest.renderView(req,res,'featurelayer.jade',layerProperties, htmlProperties);
-}
+};
+

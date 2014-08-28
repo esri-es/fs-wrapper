@@ -14,9 +14,9 @@ exports.root = function(req,res)
 
 	var htmlProperties = 
 	{
-    	serviceUrl: serviceUrl,
-    	serviceName: serviceName,
-    	serviceFullName: serviceName
+		serviceUrl: serviceUrl,
+		serviceName: serviceName,
+		serviceFullName: serviceName
 	};
 
 	var serviceProperties = 
@@ -72,4 +72,3 @@ exports.root = function(req,res)
 	};
 	esriRest.renderView(req,res,'featureserver.jade',serviceProperties,htmlProperties);
 };
-
